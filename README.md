@@ -14,7 +14,7 @@ MacroBoard is a 9-key hotswap mechanical macropad powered by Seeed XIAO RP2040. 
 - Power and communicaction via USB-C type port.
 - Compatible with KMK keyboard firmware.
 - Compatible with Windows, macOS and Linux operative systems.
-- Dimensions: 61mm x 81mm x 20mm (without case), 61mm x 81mm x 20mm (with case).
+- Dimensions: 61mm x 81mm x 31mm (without case), 66mm x 86mm x 35mm (with 3D printed case).
 
 ## Hardware Overview
 
