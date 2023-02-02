@@ -2,19 +2,19 @@
 
 ![MacroBoard](https://i0.wp.com/palmacas.com/wp-content/uploads/post6708_4.jpeg?resize=1536%2C1152&ssl=1)
 
-MacroBoard is a 9-key hotswap mechanical macropad powered by Seeed XIAO RP2040. The keyboard features 9 Kailh hotswap sockets compatible with any 3 or 5-pin MX switch, so you can choose the switches you are more confortable with. The keyboard also features a rotary encoder with push-button, and each key is backlit with a RGB LED.
+MacroBoard is a 9-key hot-swappable mechanical macropad powered by Seeed XIAO RP2040. The keyboard has 9 Kailh hot-swappable sockets compatible with any 3-pin or 5-pin MX switch, giving you the ability to choose the switches that suit you best. The keyboard also includes a rotary encoder with a push button and each key is backlit with an RGB LED.
 
 ## Features
 
-- Uses the small form factor board Seeed XIAO RP2040, based on the Raspberry Pi RP2040 microcontroller.
+- Uses Seeed XIAO RP2040, a small form factor board based on the Raspberry Pi RP2040 microcontroller.
 - Supports MicroPython and CircuitPython.
-- Kailh hotswap sockets compatible with 3-pin and 5-pin MX switches.
-- Rotary quadrature encoder with push-button.
-- SK6812 reverse mount addresable RGB LEDs to backlit each key.
-- Power and communicaction via USB-C type port.
+- Kailh hot-swappable sockets compatible with 3-pin and 5-pin MX switches.
+- Rotary quadrature encoder with push button.
+- SK6812 reverse-mounted addressable RGB LEDs to backlight each key.
+- Power and communication through a USB-C type port.
 - Compatible with KMK keyboard firmware.
-- Compatible with Windows, macOS and Linux operative systems.
-- Dimensions: 61mm x 81mm x 31mm (without case), 66mm x 86mm x 35mm (with 3D printed case).
+- Compatible with Windows, macOS, and Linux operating systems.
+- Dimensions: 61mm x 81mm x 31mm (without case), 66mm x 86mm x 35mm (with 3D-printed case).
 
 ## Hardware Overview
 
@@ -22,33 +22,33 @@ MacroBoard is a 9-key hotswap mechanical macropad powered by Seeed XIAO RP2040. 
 
 ## Getting Started
 
-This sample shows how to setup te keyboard to work with CircuitPython and KMK Firmware.
+To set up the keyboard to work with CircuitPython and KMK Firmware, follow these steps:
 
 ### CircuitPython Installation
 
 1. Enter Bootloader Mode
    - Press and hold the "BOOT" button.
-   - Connect the Seeed XIAO RP2040 to your computer while you still hold the button.
-   - The computer then will show a new drive RPI-RP2.
+   - Connect the Seeed XIAO RP2040 to your computer while still holding the button.
+   - Your computer should now show a new drive, RPI-RP2.
 2. Download the [firmware](https://circuitpython.org/board/seeeduino_xiao_rp2040/) for Seeed Studio XIAO RP2040.
 3. Drag the .uf2 file to the drive RPI-RP2.
-4. Check the drive, the name now has changed to CIRCUITPY.
+4. Check the drive. The name should now have changed to CIRCUITPY.
 
 ### NeoPixel Support 
 
-1. Download the file [*neopixel.py*](https://github.com/adafruit/Adafruit_CircuitPython_NeoPixel/blob/main/neopixel.py) and copy it to the root directory in drive CIRCUITPY.
+5. Download the file [*neopixel.py*](https://github.com/adafruit/Adafruit_CircuitPython_NeoPixel/blob/main/neopixel.py) and copy it to the root directory on drive CIRCUITPY.
 
 ### KMK Installation
 
-1. Download the [KMK Firmware](https://github.com/KMKfw/kmk_firmware) repository as a ZIP file.
-2. Extract all the files from de ZIP file, and copy the *kmk* folder to the root directory in drive CIRCUITPY.
-3. Download the files *code.py* and *boot.py* from the folder [firmware](firmware).
-4. Copy the files to the drive CIRCUITPY.
-5. Restart the keyboard by pressing the "RESET" button or disconnect and connect to the computer.
+6. Download the [KMK Firmware](https://github.com/KMKfw/kmk_firmware) repository as a ZIP file.
+7. Extract all files from de ZIP file and copy the *kmk* folder to the root directory on drive CIRCUITPY.
+8. Download the files *code.py* and *boot.py* from the [firmware](firmware) folder.
+9. Copy the files to the drive CIRCUITPY.
+10. Restart the keyboard by pressing the "RESET" button or disconnecting and reconnecting to the computer.
 
 ### Keyboard Configuration
 
-The key mapping defines the function and behaviour of each key using a keycode or a set of keycodes. The following code can be found in the file *code.py*, showing the key mapping for the MacroBoard.
+The key mapping defines the function and behavior of each key using a keycode or set of keycodes. The following code, which can be found in the file *code.py*, shows the key mapping for MacroBoard.
 
 ```python
 # Keymap
@@ -59,7 +59,7 @@ keyboard.keymap = [
     ]
 ]
 ```
-In this example the keys in the first row can switch between browser tabs and mute a tab. The keys from the second row can control de media player. And the keys from the third row work as Ctrl+C, Ctrl+V, and GUI+SPACE.
+In this example, the keys in the first row can switch between browser tabs and mute a tab. The keys in the second row can control the media player, and the keys in the third row function as `Ctrl+C`, `Ctrl+V`, and `GUI+SPACE`.
 
 ||COLUMN 1 |COLUMN 2 | COLUMN 3|
 |---|---|---|---|
@@ -67,11 +67,11 @@ In this example the keys in the first row can switch between browser tabs and mu
 |ROW 2|PREV TRACK |PLAY/PAUSE |NEXT TRACK |
 |ROW 3|CTRL+C |CTRL+V |GUI+SPACE|
 
-All the available keycodes can be found at [KMK Firmware's](http://kmkfw.io/docs/keycodes) wiki.
+You can find a list of all available keycodes at the [KMK Firmware's](http://kmkfw.io/docs/keycodes) wiki.
 
 ## Disclaimer
 
-CircuitPython firmware, KMK Firmware, and the NeoPixel library are managed and maintained by their developers.
+The CircuitPython firmware, KMK Firmware, and NeoPixel library are managed and maintained by their respective developers.
 
 ---
 More information:  
